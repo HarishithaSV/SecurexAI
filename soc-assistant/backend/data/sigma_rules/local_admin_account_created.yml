@@ -1,0 +1,19 @@
+title: New Local Administrator Account Created
+id: sigma-0004
+description: Detects creation of a new local user that is immediately added to the Administrators group, a common backdoor account technique.
+status: stable
+level: high
+logsource:
+  category: account_management
+  product: windows
+tags:
+  - attack.persistence
+  - attack.t1136.001
+detection:
+  selection:
+    process_name|contains: 'net.exe'
+    command_line|contains:
+      - '/add'
+  admin_group:
+    command_line|contains: 'administrators'
+  condition: selection and admin_group

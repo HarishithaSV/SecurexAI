@@ -1,0 +1,18 @@
+title: Multiple Authentication Failures Followed by Success
+id: sigma-0007
+description: Detects a likely brute-force authentication pattern where multiple failed logon attempts are followed by a success on a sensitive account.
+status: stable
+level: high
+logsource:
+  category: authentication
+  product: any
+tags:
+  - attack.credential_access
+  - attack.t1110
+detection:
+  selection:
+    event_type: 'authentication_success'
+    user:
+      - 'root'
+      - 'administrator'
+  condition: selection

@@ -1,0 +1,19 @@
+title: Critical System Binary Modified
+id: sigma-0008
+description: File Integrity Monitoring alert indicating a critical system binary's hash has changed unexpectedly.
+status: stable
+level: medium
+logsource:
+  category: file_change
+  product: linux
+tags:
+  - attack.defense_evasion
+  - attack.t1554
+detection:
+  selection:
+    event_type: 'file_change'
+    file_path|contains:
+      - '/usr/bin/'
+      - '/usr/sbin/'
+      - '/bin/'
+  condition: selection

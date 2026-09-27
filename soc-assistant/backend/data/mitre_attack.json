@@ -1,0 +1,62 @@
+{
+  "T1059.001": {
+    "name": "Command and Scripting Interpreter: PowerShell",
+    "tactic": "Execution",
+    "url": "https://attack.mitre.org/techniques/T1059/001/",
+    "description": "Adversaries may abuse PowerShell commands and scripts for execution."
+  },
+  "T1027": {
+    "name": "Obfuscated Files or Information",
+    "tactic": "Defense Evasion",
+    "url": "https://attack.mitre.org/techniques/T1027/",
+    "description": "Adversaries may attempt to make an executable or file difficult to discover or analyze by encrypting, encoding, or otherwise obfuscating its contents."
+  },
+  "T1003.001": {
+    "name": "OS Credential Dumping: LSASS Memory",
+    "tactic": "Credential Access",
+    "url": "https://attack.mitre.org/techniques/T1003/001/",
+    "description": "Adversaries may attempt to access credential material stored in the process memory of the Local Security Authority Subsystem Service (LSASS)."
+  },
+  "T1053.005": {
+    "name": "Scheduled Task/Job: Scheduled Task",
+    "tactic": "Persistence",
+    "url": "https://attack.mitre.org/techniques/T1053/005/",
+    "description": "Adversaries may abuse the Windows Task Scheduler to perform task scheduling for initial or recurring execution of malicious code."
+  },
+  "T1136.001": {
+    "name": "Create Account: Local Account",
+    "tactic": "Persistence",
+    "url": "https://attack.mitre.org/techniques/T1136/001/",
+    "description": "Adversaries may create a local account to maintain access to victim systems."
+  },
+  "T1071": {
+    "name": "Application Layer Protocol",
+    "tactic": "Command and Control",
+    "url": "https://attack.mitre.org/techniques/T1071/",
+    "description": "Adversaries may communicate using application layer protocols to avoid detection/network filtering by blending in with existing traffic."
+  },
+  "T1190": {
+    "name": "Exploit Public-Facing Application",
+    "tactic": "Initial Access",
+    "url": "https://attack.mitre.org/techniques/T1190/",
+    "description": "Adversaries may attempt to exploit a weakness in an Internet-facing host or system to gain initial access."
+  },
+  "T1110": {
+    "name": "Brute Force",
+    "tactic": "Credential Access",
+    "url": "https://attack.mitre.org/techniques/T1110/",
+    "description": "Adversaries may use brute force techniques to gain access to accounts when passwords are unknown or password hashes are obtained."
+  },
+  "T1554": {
+    "name": "Compromise Client Software Binary",
+    "tactic": "Persistence",
+    "url": "https://attack.mitre.org/techniques/T1554/",
+    "description": "Adversaries may modify client software binaries to establish persistent access to systems."
+  },
+  "T1078": {
+    "name": "Valid Accounts",
+    "tactic": "Defense Evasion",
+    "url": "https://attack.mitre.org/techniques/T1078/",
+    "description": "Adversaries may obtain and abuse credentials of existing accounts as a means of gaining access."
+  }
+}

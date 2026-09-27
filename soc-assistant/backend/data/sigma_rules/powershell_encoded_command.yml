@@ -1,0 +1,19 @@
+title: PowerShell Encoded Command Execution
+id: sigma-0001
+description: Detects execution of PowerShell with an encoded command, commonly used to obfuscate malicious payloads.
+status: stable
+level: high
+logsource:
+  category: process_creation
+  product: windows
+tags:
+  - attack.execution
+  - attack.t1059.001
+  - attack.t1027
+detection:
+  selection:
+    process_name|contains: 'powershell'
+    command_line|contains:
+      - '-enc'
+      - '-EncodedCommand'
+  condition: selection

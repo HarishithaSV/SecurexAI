@@ -1,0 +1,22 @@
+title: Suspicious Scheduled Task Creation for Persistence
+id: sigma-0003
+description: Detects creation of scheduled tasks from user-writable directories, a common persistence technique.
+status: stable
+level: medium
+logsource:
+  category: process_creation
+  product: windows
+tags:
+  - attack.persistence
+  - attack.t1053.005
+detection:
+  selection:
+    process_name|contains: 'schtasks'
+    command_line|contains:
+      - '/create'
+  filter:
+    command_line|contains:
+      - 'Public'
+      - 'Temp'
+      - 'AppData'
+  condition: selection and filter

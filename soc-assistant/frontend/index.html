@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SecurexA — SOC Assistant Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar" id="app-nav"></nav>
+
+  <div class="container">
+    <div class="page-header">
+      <h1>Security Operations Dashboard</h1>
+      <div>
+        <button id="refresh-btn" class="btn-secondary">Refresh</button>
+        <button id="ingest-btn" class="btn-primary">Ingest New Alerts</button>
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-value" id="kpi-total">0</div>
+        <div class="kpi-label">Total Alerts</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value" id="kpi-malicious">0</div>
+        <div class="kpi-label">Likely Malicious</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value" id="kpi-suspicious">0</div>
+        <div class="kpi-label">Suspicious</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value" id="kpi-open">0</div>
+        <div class="kpi-label">Open / Unresolved</div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="panel">
+        <h3>By Rule Level</h3>
+        <div id="level-breakdown"></div>
+      </div>
+      <div class="panel">
+        <h3>By AI Verdict</h3>
+        <div id="verdict-breakdown"></div>
+      </div>
+      <div class="panel">
+        <h3>By Status</h3>
+        <div id="status-breakdown"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Recent Alerts</h2>
+      <table>
+        <thead>
+          <tr><th>ID</th><th>Description</th><th>Agent</th><th>Level</th><th>Status</th><th>Time</th></tr>
+        </thead>
+        <tbody id="recent-alerts-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

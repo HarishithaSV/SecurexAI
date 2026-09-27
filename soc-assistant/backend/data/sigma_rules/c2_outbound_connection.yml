@@ -1,0 +1,19 @@
+title: Outbound Connection to Known Malicious Infrastructure
+id: sigma-0005
+description: Detects outbound network connections flagged against threat-intel indicators for C2 infrastructure.
+status: stable
+level: critical
+logsource:
+  category: network_connection
+  product: any
+tags:
+  - attack.command_and_control
+  - attack.t1071
+detection:
+  selection:
+    event_type: 'network_connection'
+    dst_port:
+      - 443
+      - 8080
+      - 4444
+  condition: selection

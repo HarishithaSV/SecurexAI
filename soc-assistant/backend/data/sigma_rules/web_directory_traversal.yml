@@ -1,0 +1,18 @@
+title: Web Server Directory Traversal Attempt
+id: sigma-0006
+description: Detects HTTP requests attempting path traversal to access sensitive files outside the web root.
+status: stable
+level: medium
+logsource:
+  category: web_attack
+  product: any
+tags:
+  - attack.initial_access
+  - attack.t1190
+detection:
+  selection:
+    url|contains:
+      - '../'
+      - '..%2f'
+      - '/etc/passwd'
+  condition: selection

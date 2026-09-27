@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Alerts — SecurexA SOC Assistant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <nav class="navbar" id="app-nav"></nav>
+
+  <div class="container">
+    <div class="page-header">
+      <h1>Alerts</h1>
+      <button id="refresh-alerts-btn" class="btn-secondary">Refresh</button>
+    </div>
+
+    <div class="filters">
+      <label class="muted" for="status-filter">Filter by status:</label>
+      <select id="status-filter">
+        <option value="">All</option>
+        <option value="new">New</option>
+        <option value="triaged">Triaged</option>
+        <option value="investigating">Investigating</option>
+        <option value="closed">Closed</option>
+        <option value="false_positive">False Positive</option>
+      </select>
+    </div>
+
+    <div class="panel">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th><th>Description</th><th>Agent</th><th>Level</th>
+            <th>Sigma Matches</th><th>AI Verdict</th><th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="alerts-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="alert-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/alerts.js"></script>
+</body>
+</html>

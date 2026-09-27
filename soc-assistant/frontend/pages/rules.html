@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sigma Rules & MITRE ATT&CK — SecurexA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <nav class="navbar" id="app-nav"></nav>
+
+  <div class="container">
+    <div class="page-header">
+      <h1>Sigma Detection Rules</h1>
+      <button id="reload-rules-btn" class="btn-secondary">Reload Rules from Disk</button>
+    </div>
+
+    <div class="panel">
+      <div id="rules-list"></div>
+    </div>
+
+    <div class="page-header">
+      <h1>MITRE ATT&CK Technique Reference</h1>
+    </div>
+    <div class="panel">
+      <table>
+        <thead>
+          <tr><th>ID</th><th>Name</th><th>Tactic</th><th>Description</th></tr>
+        </thead>
+        <tbody id="mitre-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/rules.js"></script>
+</body>
+</html>
