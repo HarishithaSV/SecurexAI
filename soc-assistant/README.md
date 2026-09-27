@@ -1,4 +1,4 @@
-# SecurexA — AI-Powered SOC Assistant
+# SecurexAI — AI-Powered SOC Assistant
 
 An end-to-end Security Operations Center (SOC) assistant that ingests security
 alerts (from a real **Wazuh** manager, or a built-in simulator), matches them
